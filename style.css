@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url(fonts/Montserrat-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url(fonts/Montserrat-Regular.ttf);
+}
+
+h1 {
+    font-family: 'Montserrat-Black';
+    font-size: 30px;
+}
+
+h2 {
+    font-family: 'Montserrat-Regular';
+    font-size: 30px;
+}
+
+p {
+    font-family: 'Montserrat-Regular';
+    font-size: 20px;
+}
+
+.title {
+    position: relative;
+    font-size: 170px;
+    color: #ffffff; 
+    top: 50px;
+    left: 100px;
+}
+
+.subtitle {
+    position: relative;
+    font-size: 30.5px;
+    color: #ffffff;
+    top: -90px;
+    left: 110px;
+}
+
+.subtitle2 {
+    position: relative;
+    color: white;
+    top: -90px;
+    left: 100px;
+    padding: 10px;
+}
+
+body {
+    background-image: url(images/background3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover
+}
+
+.glass-box {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    padding: 15px;
+    top: 100px;
+    left: 100px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent white */
+    border-radius: 30px; /* Rounded corners */
+    backdrop-filter: blur(20px); /* Blur effect */
+    -webkit-backdrop-filter: blur(20px); /* Safari support */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.navbar ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar a{
+    font-family: 'Montserrat-Regular';
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: #ffffff;
+    color: black;
+    border-radius: 100px;
+}
+
+.navbar li{
+    float: right;
+}
+
+
