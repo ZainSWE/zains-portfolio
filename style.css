@@ -101,24 +101,24 @@ a:visited {
 }
 
 a:link {
-    color: white; /* Unvisited link color */
+    color: white; 
 }
 
 a:hover {
-    color: red; /* Hover color */
+    color: red; 
 }
 
 a:active {
-    color: red; /* Active (clicked) link color */
+    color: red; 
 }
 
 a:focus {
-    color: red; /* Focused link color */
+    color: red; 
 }
 
 .glass-box-container {
-    perspective: 1000px; /* Adds perspective for 3D tilt */
-    display: inline-block; /* Ensures the container sizes to its content */
+    perspective: 1000px;
+    display: inline-block; 
 }
 
 .glass-box {
@@ -129,26 +129,26 @@ a:focus {
     padding: 0px;
     top: 150px;
     left: 100px;
-    background: rgba(255, 255, 255, 0.1); /* Transparent white */
-    border-radius: 80px; /* Rounded corners */
-    backdrop-filter: blur(20px); /* Blur effect */
-    -webkit-backdrop-filter: blur(20px); /* Safari support */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transform-style: preserve-3d; /* Ensures 3D transform effects work */
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smooth transition */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 80px; 
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+    transform-style: preserve-3d; 
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; 
 }
 
-/* Hover effect to skew the box */
+
 .glass-box-container:hover .glass-box {
     transform: rotateX(25deg) rotateY(25deg);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); 
 }
 
-/* Reset the tilt when not hovering */
+
 .glass-box {
     transform: rotateX(0deg) rotateY(0deg);
-    transition: transform 0.2s ease-out; /* Smooth transition for transform */
-    will-change: transform; /* Optimize performance */
+    transition: transform 0.2s ease-out; 
+    will-change: transform; 
 }
 
 .github-glass-box {
@@ -159,11 +159,11 @@ a:focus {
     padding: 0px;
     top: 150px;
     left: 100px;
-    background: rgba(255, 255, 255, 0.1); /* Transparent white */
-    border-radius: 80px; /* Rounded corners */
-    backdrop-filter: blur(20px); /* Blur effect */
-    -webkit-backdrop-filter: blur(20px); /* Safari support */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 80px; 
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
 }
 
 .edits-glass-box {
@@ -174,11 +174,11 @@ a:focus {
     padding: 0px;
     top: 150px;
     left: 100px;
-    background: rgba(255, 255, 255, 0.1); /* Transparent white */
-    border-radius: 80px; /* Rounded corners */
-    backdrop-filter: blur(20px); /* Blur effect */
-    -webkit-backdrop-filter: blur(20px); /* Safari support */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 80px; 
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
 }
 
 .animations-glass-box {
@@ -189,11 +189,11 @@ a:focus {
     padding: 0px;
     top: 150px;
     left: 100px;
-    background: rgba(255, 255, 255, 0.1); /* Transparent white */
-    border-radius: 80px; /* Rounded corners */
-    backdrop-filter: blur(20px); /* Blur effect */
-    -webkit-backdrop-filter: blur(20px); /* Safari support */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 80px; 
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
 }
 
 .motiongraphics-glass-box {
@@ -204,11 +204,11 @@ a:focus {
     padding: 0px;
     top: 150px;
     left: 100px;
-    background: rgba(255, 255, 255, 0.1); /* Transparent white */
-    border-radius: 80px; /* Rounded corners */
-    backdrop-filter: blur(20px); /* Blur effect */
-    -webkit-backdrop-filter: blur(20px); /* Safari support */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 80px; 
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
 }
 
 .navbar ul{
@@ -240,7 +240,7 @@ a:focus {
 }
 
   
- /* Style the video background */
+ 
 .myVideo {
     position: absolute;
     top: 0;
@@ -256,7 +256,7 @@ a:focus {
     display: none;
 }
 
-/* Media query for 21:9 screens */
+
 @media (min-aspect-ratio: 21/9) {
     .video-16-9 {
         display: none;
@@ -267,7 +267,7 @@ a:focus {
     }
 }
 
-/* Media query for 16:9 screens */
+
 @media (max-aspect-ratio: 16/9) {
     .video-16-9 {
         display: block;
@@ -278,53 +278,53 @@ a:focus {
     }
 }
 
-/* Ensure the body and content remain as they are */
+
 body {
     margin: 0;
     padding: 0;
-    background-color: black; /* Fallback for video loading */
-    position: relative; /* Establish a parent for the video */
+    background-color: black;
+    position: relative; 
 }
 
-/* Existing styling adjustments for navbar and glass box */
+
 .navbar, .glass-box {
-    position: relative; /* Maintain positioning without altering layout */
-    z-index: 1; /* Keep above the video */
+    position: relative; 
+    z-index: 1; 
 }
 
 .about1 {
-    position: absolute; /* Absolute positioning for precise placement */
+    position: absolute; 
     color: rgb(255, 255, 255);
     font-family: 'Montserrat-Regular';
     font-size: 20px;
-    top: 70%; /* Adjusted to align based on viewport height */
-    right: 14%; /* Positioned 5% from the right edge */
+    top: 70%;
+    right: 14%;
 }
 
 .about2 {
-    position: absolute; /* Absolute positioning for precise placement */
+    position: absolute;
     color: rgb(255, 255, 255);
     font-family: 'Montserrat-Black';
     font-size: 30px;
-    top: 75%; /* Slightly lower than about1 */
-    right: 15%; /* Same alignment as about1 */
+    top: 75%;
+    right: 15%;
 }
 
 .about2git {
-    position: absolute; /* Absolute positioning for precise placement */
+    position: absolute; 
     color: rgb(255, 255, 255);
     font-family: 'Montserrat-Black';
     font-size: 50px;
-    top: 70%; /* Slightly lower than about1 */
-    right: 13.2%; /* Same alignment as about1 */
+    top: 70%; 
+    right: 13.2%; 
 }
 
-/* Hide scrollbars in Chrome */
+
 ::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+    display: none; 
 }
 
-/* Default state of the search bar */
+
 .search-container {
     position: fixed;
     top: 3.6%;
@@ -341,59 +341,54 @@ body {
 .search-bar {
     width: 175px;
     height: 40px;
-    border: 2px solid transparent; /* Border is invisible by default */
-    background: transparent; /* No background by default */
+    border: 2px solid transparent;
+    background: transparent;
     font-family: 'Montserrat-Regular';
     font-size: 17px;
     padding: 0 25px;
-    color: white; /* Default text color is white */
+    color: white;
     outline: none;
-    border-radius: 20px; /* Rounded corners by default */
-    box-shadow: none; /* No shadow by default */
+    border-radius: 20px;
+    box-shadow: none; 
     transition: all 0.3s ease;
 }
 
-/* Hover and Focus effects for search bar */
+
 .search-bar-wrapper:hover .search-bar,
 .search-bar:focus {
-    background: white; /* Solid white background on hover/focus */
-    color: rgb(0, 0, 0); /* Text color turns black */
-    border-radius: 20px; /* Rounded capsule shape */
-    border: 2px solid transparent; /* No border visible */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    background: white; 
+    color: rgb(0, 0, 0); 
+    border-radius: 20px; 
+    border: 2px solid transparent; 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); 
 }
 
-/* Placeholder text styling */
+
 .search-bar::placeholder {
-    color: rgba(255, 255, 255, 0.6); /* Placeholder text color */
+    color: rgba(255, 255, 255, 0.6); 
 }
 
-/* Change placeholder text color when hovered/focused */
+
 .search-bar-wrapper:hover .search-bar::placeholder,
 .search-bar:focus::placeholder {
-    color: rgb(0, 0, 0); /* Placeholder text turns black on hover/focus */
+    color: rgb(0, 0, 0); 
 }
 
 body, h1, h2, p, .navbar a {
-    -webkit-font-smoothing: antialiased; /* For Chrome/Safari */
-    -moz-osx-font-smoothing: grayscale;  /* For Firefox on macOS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .search-bar, .navbar a {
-    will-change: transform, opacity; /* Hint to browser for optimizations */
+    will-change: transform, opacity;
 }
 
 .search-bar {
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
-    -moz-backdrop-filter: blur(10px);    /* Firefox (experimental) */
-    backdrop-filter: blur(10px);         /* Standard */
+    -webkit-backdrop-filter: blur(10px); 
+    -moz-backdrop-filter: blur(10px);    
+    backdrop-filter: blur(10px);
 }
 
 * {
-    box-sizing: border-box; /* Ensures consistent box model across browsers */
+    box-sizing: border-box;
 }
-
-.search-bar, .navbar a {
-    transform: translate3d(0, 0, 0); /* Forces GPU acceleration */
-}
-
