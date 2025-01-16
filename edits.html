@@ -17,16 +17,102 @@
             <li><a href="index.html">Home</a></li>
         </ul>
     </nav>
-    
-    <div class="edits-glass-box">
-        <h1 class="edits-title">EDITS</h1>
-    </div>
 
+    <div class="glass-box-container">
+        <div class="edits-glass-box">
+        <h1 class="edits-title">EDITS</h1></div>
+    </div>
+    
     <div class="myVideo">
         <video autoplay muted loop id="myVideo">
-            <source src="shadow2.mp4" type="video/mp4">
+            <source src="shadow3.mp4" type="video/mp4">
           </video>
     </div>
+
+    <script>
+        // Select all glass boxes dynamically (using a common class prefix or specific names)
+        const glassBoxes = document.querySelectorAll('.glass-box, .github-glass-box, .edits-glass-box, .animations-glass-box, .motiongraphics-glass-box');
+
+// Add hover effect to each glass box
+glassBoxes.forEach((box) => {
+    let isHovering = false;
+
+    box.addEventListener('mousemove', (event) => {
+        isHovering = true;
+
+        const rect = box.getBoundingClientRect(); // Get the box's dimensions and position
+        const x = event.clientX - rect.left; // Calculate mouse X within the box
+        const y = event.clientY - rect.top; // Calculate mouse Y within the box
+
+        // Calculate tilt (adjust angles for smoother movement if needed)
+        const rotateX = ((y / rect.height) - 0.5) * -25; // Tilt up/down
+        const rotateY = ((x / rect.width) - 0.5) * 25; // Tilt left/right
+
+        // Apply transform styles
+        box.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        box.style.transition = 'transform 0.1s ease-out'; // Smoothens motion
+    });
+
+    box.addEventListener('mouseleave', () => {
+        isHovering = false;
+
+        // Reset to default state with a smooth transition
+        box.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        box.style.transition = 'transform 0.3s ease-out';
+    });
+});
+
+    </script>
+
+<div class="footer" >2025© Zain SWE Portfolio / Edits</div>
+
+<div class="search-container">
+    <form method="GET" onsubmit="checkSearchInput(event)">
+        <input type="text" class="search-bar" name="page" placeholder="Type to search" id="searchInput" required>
+    </form>
+</div>
+
+<script>
+    function checkSearchInput(event) {
+        var searchInput = document.getElementById('searchInput').value.toLowerCase();
+        var pageUrl = '';
+
+        // Log the input for debugging
+        console.log("User input:", searchInput);
+
+        // Define pages for specific inputs and their related keywords
+        switch (true) {
+            case /home|main|welcome|index|mainpage|menu|university of guelph|computer science|Zain/.test(searchInput):
+                pageUrl = 'index.html';
+                break;
+            case /github|code|repository|repo|repos|coding|coder|programming|program|cv|apps|applications|development|dev|develop|SWE/.test(searchInput):
+                pageUrl = 'github.html';
+                break;
+            case /edits|eidts|editss|edi|editing|edits|clean edit|transitions|creative|creative work|YouTube|premiere pro|after effects|photshop|topaz|adobe|creative cloud|hobby/.test(searchInput):
+                pageUrl = 'edits.html';
+                break;
+            case /animations|motion|video|sonic|shadow|sega|blender|ue5|unreal engine 5| unreal engine|blender animation| blender animations|lego|lego animation| lego animations/.test(searchInput):
+                pageUrl = 'animations.html';
+                break;
+            case /motiongraphics|vfx|visual effects|motiongraphic|graphics|motion|aesthetic|animated graphics/.test(searchInput):
+                pageUrl = 'motiongraphics.html';
+                break;
+            default:
+                pageUrl = '';  // Empty means no match
+                break;
+        }
+
+        // If a valid page URL is found, redirect the user
+        if (pageUrl) {
+            event.preventDefault();  // Prevent form submission to the default action
+            console.log("Redirecting to:", pageUrl);  // Log the redirection URL
+            window.location.href = pageUrl;  // Redirect to the corresponding page
+        } else {
+            console.log("No match found");  // If no match, log that no page was found
+        }
+    }
+</script>
+
 
 </body>
 </html>

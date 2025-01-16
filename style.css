@@ -23,6 +23,15 @@ p {
     font-size: 20px;
 }
 
+.footer {
+    position: absolute;
+    font-family: 'Montserrat-Regular';
+    font-size: 10px;
+    color: white;
+    top: 1060px;
+    left: 10px;
+}
+
 .title {
     position: relative;
     font-size: 170px;
@@ -63,7 +72,10 @@ p {
     left: 100px;
 }
 
-.github-subtitle {
+.github-subtitle,
+.edits-subtitle,
+.animations-subtitle,
+.motiongraphics-subtitle {
     font-family: 'Montserrat-Regular';
     position: relative;
     font-size: 20px;
@@ -73,12 +85,14 @@ p {
     left: 110px;
 }
 
-.subtitle {
+.home-subtitle {
+    font-family: 'Montserrat-Regular';
     position: relative;
-    font-size: 25px;
+    font-size: 20px;
     color: #ffffff;
-    top: -90px;
-    left: 110px;
+    lighting-color: white;
+    top: -80px;
+    left: 210px;
 }
 
 
@@ -102,11 +116,17 @@ a:focus {
     color: red; /* Focused link color */
 }
 
+.glass-box-container {
+    perspective: 1000px; /* Adds perspective for 3D tilt */
+    display: inline-block; /* Ensures the container sizes to its content */
+}
+
 .glass-box {
     position: relative;
-    width: 700px;
-    max-width: 700px;
-    padding: 20px;
+    width: 820px;
+    height: 330px;
+    max-width: 1000px;
+    padding: 0px;
     top: 150px;
     left: 100px;
     background: rgba(255, 255, 255, 0.1); /* Transparent white */
@@ -114,14 +134,29 @@ a:focus {
     backdrop-filter: blur(20px); /* Blur effect */
     -webkit-backdrop-filter: blur(20px); /* Safari support */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transform-style: preserve-3d; /* Ensures 3D transform effects work */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smooth transition */
+}
+
+/* Hover effect to skew the box */
+.glass-box-container:hover .glass-box {
+    transform: rotateX(25deg) rotateY(25deg);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+}
+
+/* Reset the tilt when not hovering */
+.glass-box {
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 0.2s ease-out; /* Smooth transition for transform */
+    will-change: transform; /* Optimize performance */
 }
 
 .github-glass-box {
     position: relative;
-    width: 640px;
-    height: 350px;
+    width: 630px;
+    height: 260px;
     max-width: 800px;
-    padding: 20px;
+    padding: 0px;
     top: 150px;
     left: 100px;
     background: rgba(255, 255, 255, 0.1); /* Transparent white */
@@ -134,9 +169,9 @@ a:focus {
 .edits-glass-box {
     position: relative;
     width: 530px;
-    height: 350px;
+    height: 215px;
     max-width: 800px;
-    padding: 20px;
+    padding: 0px;
     top: 150px;
     left: 100px;
     background: rgba(255, 255, 255, 0.1); /* Transparent white */
@@ -288,3 +323,77 @@ body {
 ::-webkit-scrollbar {
     display: none; /* Chrome, Safari */
 }
+
+/* Default state of the search bar */
+.search-container {
+    position: fixed;
+    top: 3.6%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.search-bar-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.search-bar {
+    width: 175px;
+    height: 40px;
+    border: 2px solid transparent; /* Border is invisible by default */
+    background: transparent; /* No background by default */
+    font-family: 'Montserrat-Regular';
+    font-size: 17px;
+    padding: 0 25px;
+    color: white; /* Default text color is white */
+    outline: none;
+    border-radius: 20px; /* Rounded corners by default */
+    box-shadow: none; /* No shadow by default */
+    transition: all 0.3s ease;
+}
+
+/* Hover and Focus effects for search bar */
+.search-bar-wrapper:hover .search-bar,
+.search-bar:focus {
+    background: white; /* Solid white background on hover/focus */
+    color: rgb(0, 0, 0); /* Text color turns black */
+    border-radius: 20px; /* Rounded capsule shape */
+    border: 2px solid transparent; /* No border visible */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Placeholder text styling */
+.search-bar::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Placeholder text color */
+}
+
+/* Change placeholder text color when hovered/focused */
+.search-bar-wrapper:hover .search-bar::placeholder,
+.search-bar:focus::placeholder {
+    color: rgb(0, 0, 0); /* Placeholder text turns black on hover/focus */
+}
+
+body, h1, h2, p, .navbar a {
+    -webkit-font-smoothing: antialiased; /* For Chrome/Safari */
+    -moz-osx-font-smoothing: grayscale;  /* For Firefox on macOS */
+}
+
+.search-bar, .navbar a {
+    will-change: transform, opacity; /* Hint to browser for optimizations */
+}
+
+.search-bar {
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    -moz-backdrop-filter: blur(10px);    /* Firefox (experimental) */
+    backdrop-filter: blur(10px);         /* Standard */
+}
+
+* {
+    box-sizing: border-box; /* Ensures consistent box model across browsers */
+}
+
+.search-bar, .navbar a {
+    transform: translate3d(0, 0, 0); /* Forces GPU acceleration */
+}
+
