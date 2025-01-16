@@ -31,39 +31,146 @@ p {
     left: 100px;
 }
 
+.edits-title {
+    position: relative;
+    font-size: 100px;
+    color: #ffffff; 
+    top: 50px;
+    left: 100px;
+}
+
+.animations-title {
+    position: relative;
+    font-size: 100px;
+    color: #ffffff; 
+    top: 50px;
+    left: 100px;
+}
+
+.motiongraphics-title {
+    position: relative;
+    font-size: 100px;
+    color: #ffffff; 
+    top: 50px;
+    left: 100px;
+}
+
+.github-title {
+    position: relative;
+    font-size: 100px;
+    color: #ffffff; 
+    top: 50px;
+    left: 100px;
+}
+
+.github-subtitle {
+    font-family: 'Montserrat-Regular';
+    position: relative;
+    font-size: 20px;
+    color: #ffffff;
+    lighting-color: white;
+    top: -20px;
+    left: 110px;
+}
+
 .subtitle {
     position: relative;
-    font-size: 30.5px;
+    font-size: 25px;
     color: #ffffff;
     top: -90px;
     left: 110px;
 }
 
-.subtitle2 {
-    position: relative;
+
+a:visited {
     color: white;
-    top: -90px;
-    left: 100px;
-    padding: 10px;
 }
 
-body {
-    background-image: url(images/background3.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover
+a:link {
+    color: white; /* Unvisited link color */
+}
+
+a:hover {
+    color: red; /* Hover color */
+}
+
+a:active {
+    color: red; /* Active (clicked) link color */
+}
+
+a:focus {
+    color: red; /* Focused link color */
 }
 
 .glass-box {
     position: relative;
-    width: 80%;
-    max-width: 800px;
-    padding: 15px;
-    top: 100px;
+    width: 700px;
+    max-width: 700px;
+    padding: 20px;
+    top: 150px;
     left: 100px;
     background: rgba(255, 255, 255, 0.1); /* Transparent white */
-    border-radius: 30px; /* Rounded corners */
+    border-radius: 80px; /* Rounded corners */
+    backdrop-filter: blur(20px); /* Blur effect */
+    -webkit-backdrop-filter: blur(20px); /* Safari support */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.github-glass-box {
+    position: relative;
+    width: 640px;
+    height: 350px;
+    max-width: 800px;
+    padding: 20px;
+    top: 150px;
+    left: 100px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent white */
+    border-radius: 80px; /* Rounded corners */
+    backdrop-filter: blur(20px); /* Blur effect */
+    -webkit-backdrop-filter: blur(20px); /* Safari support */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.edits-glass-box {
+    position: relative;
+    width: 530px;
+    height: 350px;
+    max-width: 800px;
+    padding: 20px;
+    top: 150px;
+    left: 100px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent white */
+    border-radius: 80px; /* Rounded corners */
+    backdrop-filter: blur(20px); /* Blur effect */
+    -webkit-backdrop-filter: blur(20px); /* Safari support */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.animations-glass-box {
+    position: relative;
+    width: 930px;
+    height: 220px;
+    max-width: 2000px;
+    padding: 0px;
+    top: 150px;
+    left: 100px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent white */
+    border-radius: 80px; /* Rounded corners */
+    backdrop-filter: blur(20px); /* Blur effect */
+    -webkit-backdrop-filter: blur(20px); /* Safari support */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.motiongraphics-glass-box {
+    position: relative;
+    width: 770px;
+    height: 340px;
+    max-width: 800px;
+    padding: 0px;
+    top: 150px;
+    left: 100px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent white */
+    border-radius: 80px; /* Rounded corners */
     backdrop-filter: blur(20px); /* Blur effect */
     -webkit-backdrop-filter: blur(20px); /* Safari support */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -77,6 +184,7 @@ body {
 }
 
 .navbar a{
+    position: relative;
     font-family: 'Montserrat-Regular';
     color: white;
     text-decoration: none;
@@ -92,7 +200,91 @@ body {
 }
 
 .navbar li{
+    background-color: rgba(0, 0, 0, 0);
     float: right;
 }
 
+  
+ /* Style the video background */
+.myVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+}
 
+.video-21-9 {
+    display: none;
+}
+
+/* Media query for 21:9 screens */
+@media (min-aspect-ratio: 21/9) {
+    .video-16-9 {
+        display: none;
+    }
+
+    .video-21-9 {
+        display: block;
+    }
+}
+
+/* Media query for 16:9 screens */
+@media (max-aspect-ratio: 16/9) {
+    .video-16-9 {
+        display: block;
+    }
+
+    .video-21-9 {
+        display: none;
+    }
+}
+
+/* Ensure the body and content remain as they are */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Fallback for video loading */
+    position: relative; /* Establish a parent for the video */
+}
+
+/* Existing styling adjustments for navbar and glass box */
+.navbar, .glass-box {
+    position: relative; /* Maintain positioning without altering layout */
+    z-index: 1; /* Keep above the video */
+}
+
+.about1 {
+    position: absolute; /* Absolute positioning for precise placement */
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat-Regular';
+    font-size: 20px;
+    top: 70%; /* Adjusted to align based on viewport height */
+    right: 14%; /* Positioned 5% from the right edge */
+}
+
+.about2 {
+    position: absolute; /* Absolute positioning for precise placement */
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat-Black';
+    font-size: 30px;
+    top: 75%; /* Slightly lower than about1 */
+    right: 15%; /* Same alignment as about1 */
+}
+
+.about2git {
+    position: absolute; /* Absolute positioning for precise placement */
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat-Black';
+    font-size: 50px;
+    top: 70%; /* Slightly lower than about1 */
+    right: 13.2%; /* Same alignment as about1 */
+}
+
+/* Hide scrollbars in Chrome */
+::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
